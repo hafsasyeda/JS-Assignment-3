@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendation App</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+select {
+  font-size: 16px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  font-size: 16px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+#recommendations {
+  display: none;
+}
+
+#recommendations h2 {
+  margin-top: 0;
+}
+
+#movie-list {
+  list-style: none;
+  padding: 0;
+}
+
+#movie-list li {
+  font-size: 10px}
+    </style>
+  </head>
+  <body>
+    <h1>Movie Recommendation App</h1>
+    <div id="preferences">
+      <h2>Find a Movie</h2>
+      <form>
+        <label for="genre">Genre:</label>
+        <select id="genre">
+          <option value="action">Action</option>
+          <option value="comedy">Comedy</option>
+          <option value="drama">Drama</option>
+          <option value="horror">Horror</option>
+          <option value="sci-fi">Sci-Fi</option>
+        </select>
+        <br>
+        <label for="rating">Rating:</label>
+        <select id="rating">
+          <option value="1">1 star</option>
+          <option value="2">2 stars</option>
+          <option value="3">3 stars</option>
+          <option value="4">4 stars</option>
+          <option value="5">5 stars</option>
+        </select>
+        <br>
+        <label for="release-year">Release Year:</label>
+        <select id="release-year">
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+        </select>
+        <br>
+        <button type="button" onclick="generateRecommendations()">Find Movies</button>
+      </form>
+    </div>
+    <div id="recommendations">
+      <h2>Recommended Movies</h2>
+      <ul id="movie-list">
+      </ul>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
